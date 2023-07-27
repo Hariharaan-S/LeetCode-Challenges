@@ -14,6 +14,6 @@ class Solution {
         for(int i=0;i<res1.size();i++){
             res[i] = res1.get(i);
         }
-        return res1;
+        return res;
     }
 }
