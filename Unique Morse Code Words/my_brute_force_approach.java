@@ -1,16 +1,16 @@
 import java.util.HashMap;
 
 class Solution {
-    public int uniqueMorseRepresentations(String[] words) {
+    public int uniquemorRepresentations(String[] words) {
         if(words.length == 1){
             return 1;
         }
-        String morse[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        String mor[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         HashMap<Integer,String>map = new HashMap<>();
         HashMap<String,Integer>res = new HashMap<>();
         int key = 97;
-        for(int i=0;i<morse.length;i++){
-            map.put(key,morse[i]);
+        for(int i=0;i<mor.length;i++){
+            map.put(key,mor[i]);
             key += 1;
         }
         for(int i=0;i<words.length;i++){

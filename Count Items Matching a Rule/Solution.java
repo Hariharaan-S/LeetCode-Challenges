@@ -3,18 +3,18 @@ import java.util.List;
 class Solution {
     public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int count = 0;
-        int index;
+        int ind;
         if(ruleKey.equals("type")){
-            index = 0;
+            ind = 0;
         }
         else if(ruleKey.equals("color")){
-            index = 1;
+            ind= 1;
         }
         else{
-            index = 2;
+            ind = 2;
         }
         for(int i=0;i<items.size();i++){
-            String temp = items.get(i).get(index);
+            String temp = items.get(i).get(ind);
             if(temp.equals(ruleValue)){
                 count++;
             }

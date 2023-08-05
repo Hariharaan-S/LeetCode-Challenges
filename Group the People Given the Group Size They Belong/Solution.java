@@ -5,12 +5,12 @@ public class Solution {
         HashMap<Integer,List<Integer>> map = new HashMap<>();
         for(int i=0;i<arr.length;i++){
             int size = arr[i];
-            List<Integer> temp = map.getOrDefault(size,new ArrayList<>());
-            temp.add(i);
-            map.put(size,temp);
+            List<Integer> t = map.getOrDefault(size,new ArrayList<>());
+            t.add(i);
+            map.put(size,t);
 
-            if(temp.size() == size){
-                res.add(temp);
+            if(t.size() == size){
+                res.add(t);
                 map.remove(size);
             }
         }

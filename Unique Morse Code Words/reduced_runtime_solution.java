@@ -2,16 +2,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Solution {
-    public int uniqueMorseRepresentations(String[] words) {
+    public int uniqueMorRepresentations(String[] words) {
         if(words.length == 1){
             return 1;
         }
-        String morse[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        String Mor[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         Set<String>res = new HashSet<>();
         for(String word: words){
             StringBuilder s = new StringBuilder();
             for(char c: word.toCharArray()){
-                s.append(morse[c-'a']);
+                s.append(Mor[c-'a']);
             }
             res.add(s.toString());
         }

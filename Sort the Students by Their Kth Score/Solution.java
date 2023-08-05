@@ -15,12 +15,12 @@ class Solution {
         }
         Arrays.sort(arr);
         int ind1=row-1;
-        int ans[][]=new int[row][col];
+        int a[][]=new int[row][col];
         for(int i=0;i<row;i++){
              int j=h.get(arr[i]);
-             ans[ind1--]=score[j];
+             a[ind1--]=score[j];
         }
-        return ans;
+        return a;
        
     }
 }

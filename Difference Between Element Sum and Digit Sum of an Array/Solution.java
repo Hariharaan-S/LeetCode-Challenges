@@ -1,18 +1,18 @@
 class Solution {
-    private static int digitSum(int num){
+    private static int digitSum(int Num){
         int sum = 0;
-        while(num>0){
-            sum += num%10;
-            num/=10;
+        while(Num>0){
+            sum += Num%10;
+            Num/=10;
         }
         return sum;
     }
-    public int differenceOfSum(int[] nums) {
+    public int differenceOfSum(int[] Nums) {
         int sum = 0;
         int d = 0;
-        for(int i=0;i<nums.length;i++){
-            sum += nums[i];
-            d += digitSum(nums[i]);
+        for(int i=0;i<Nums.length;i++){
+            sum += Nums[i];
+            d += digitSum(Nums[i]);
         }
         return Math.abs(sum-d);
     }
